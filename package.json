@@ -1,6 +1,7 @@
 {
   "name": "itv-task",
   "version": "0.1.0",
+  "proxy": "https://api.itv.uz/api/content/main/2",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.10.0",

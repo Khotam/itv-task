@@ -4,7 +4,7 @@ import { useFetch } from "../../customHooks/useFetch";
 import CollectionContainer from "../CollectionContainer/CollectionContainer";
 import Spinner from "../Spinner/Spinner";
 import classes from "./Collection.module.css";
-import { baseUrl, userId } from "../../url";
+import { userId } from "../../url";
 import { usePage } from "../../customHooks/usePage";
 import { useHistory } from "react-router-dom";
 import Error from "../Error/Error";
@@ -14,11 +14,7 @@ const Collection = () => {
 
   const [page, setPage] = usePage(1);
 
-  const [
-    data,
-    loading,
-    error,
-  ] = useFetch(`${baseUrl}/list?page=${page}&user=${userId}
+  const [data, loading, error] = useFetch(`/list?page=${page}&user=${userId}
       `);
 
   useEffect(() => {
