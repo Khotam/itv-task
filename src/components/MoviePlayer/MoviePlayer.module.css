@@ -1,0 +1,22 @@
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  /* display: flex;
+  justify-content: center; */
+}
+
+.playerWrapper {
+  position: relative;
+  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+}
+
+.reactPlayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.reactPlayer video {
+  object-fit: cover;
+}

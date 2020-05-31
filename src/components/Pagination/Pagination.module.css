@@ -1,0 +1,24 @@
+.pagination {
+  display: flex;
+  padding: 0;
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+.pagination li a {
+  cursor: pointer;
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid #ddd;
+}
+
+.active {
+  background-color: #0099ff;
+  border: 1px solid #0099ff;
+}
+
+.pagination li.active a {
+  color: #fff;
+}
