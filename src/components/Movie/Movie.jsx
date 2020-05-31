@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouteMatch } from "react-router-dom";
 import { useFetch } from "../../customHooks/useFetch";
-import { userId } from "../../url";
+import { baseUrl, userId } from "../../url";
 import Spinner from "../Spinner/Spinner";
 import MovieCard from "../MovieCard/MovieCard";
 import MoviePlayer from "../MoviePlayer/MoviePlayer";
@@ -12,7 +12,9 @@ const Movie = () => {
   const match = useRouteMatch("/movies/:movieId");
   const { movieId } = match.params;
 
-  const [data, loading, error] = useFetch(`/show/${movieId}?user=${userId}`);
+  const [data, loading, error] = useFetch(
+    `${baseUrl}/show/${movieId}?user=${userId}`
+  );
 
   const { countries_str, description, files, genres_str, title, year } =
     data?.movie || {};
